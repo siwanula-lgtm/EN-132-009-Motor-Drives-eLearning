@@ -1,0 +1,8 @@
+services:
+  motordrives-elearning:
+    build: .
+    image: en-132-009-motor-drives-elearning:latest
+    container_name: en-132-009-motor-drives-elearning
+    ports:
+      - "3002:3000"
+    restart: unless-stopped
