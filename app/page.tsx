@@ -176,6 +176,9 @@ export default function HomePage() {
         <Target className="w-5 h-5" />
         ผลลัพธ์การเรียนรู้ระดับรายวิชา (CLOs)
       </h2>
+      <p className="text-xs text-gray-500 dark:text-gray-400 -mt-3 mb-4">
+        รายวิชา EN-132-009 การขับเคลื่อนมอเตอร์ไฟฟ้า 3(2-3-5) เป็นรายวิชาตามหลักสูตร 2563 ผลลัพธ์การเรียนรู้ระดับรายวิชา (CLO1–CLO4) และน้ำหนักร้อยละ 10/40/40/10 อ้างอิงจาก มคอ.3 รายวิชาเทียบเท่าในหลักสูตร 2568 คือ EN-132-006 การขับเคลื่อนมอเตอร์ไฟฟ้า 3(2-2-5)
+      </p>
       <div className="grid md:grid-cols-2 gap-3">
         {clos.map((clo) => {
           const related = modules.filter((m) => m.clo.split(", ").includes(clo.id)).map((m) => Number(m.id));
