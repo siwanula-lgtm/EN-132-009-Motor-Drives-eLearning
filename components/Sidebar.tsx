@@ -15,6 +15,7 @@ import {
   NotebookText,
 } from "lucide-react";
 import { modules } from "@/lib/modules-data";
+import VisitCounter from "./VisitCounter";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -188,6 +189,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <SidebarLink href="https://www.nema.org/standards/view/motors-and-generators" label="NEMA MG 1 Motors and Generators" external onClick={onClose} />
             <SidebarLink href="https://www.falstad.com/circuit/" label="Falstad Circuit Simulator" external onClick={onClose} />
           </SidebarSection>
+          <SidebarLink href="/stats" label="📊 สถิติการเข้าใช้เว็บไซต์" isActive={pathname === "/stats"} onClick={onClose} />
+          <div className="mt-3">
+            <VisitCounter compact />
+          </div>
         </nav>
       </aside>
     </>

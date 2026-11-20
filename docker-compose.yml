@@ -4,5 +4,10 @@ services:
     image: en-132-009-motor-drives-elearning:latest
     container_name: en-132-009-motor-drives-elearning
     ports:
-      - "3002:3000"
+      - "8039:3000"
     restart: unless-stopped
+    volumes:
+      - visitor-stats:/app/data   # เก็บสถิติการเข้าใช้ถาวร ไม่หายเมื่อ build ใหม่
+
+volumes:
+  visitor-stats:

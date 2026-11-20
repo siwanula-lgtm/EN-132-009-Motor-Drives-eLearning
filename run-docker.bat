@@ -14,8 +14,8 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
-echo Opening http://localhost:3002 ...
+echo Opening http://localhost:8039 ...
 timeout /t 5 >nul
-start "" http://localhost:3002
+start "" http://localhost:8039
 docker compose ps
 pause
